@@ -315,16 +315,38 @@
   /* ============ responsive ============ */
   @media (min-width: 981px) and (max-width: 1180px) {
     section, nav, footer { padding-left: 40px; padding-right: 40px; }
-    .tagline { right: 40px; }
-    .email { left: 40px; }
-    .years { left: 40px; }
-    .badge { right: 20px; bottom: 110px; width: 170px; }
-    .badge svg { width: 96px; height: 96px; }
+
+    /* hero becomes a clean two-column layout: text left, photo right */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+      grid-template-rows: auto auto auto 1fr;
+      align-items: start;
+      column-gap: 32px;
+      padding: 56px 40px 0;
+      min-height: auto;
+    }
+    h1 { grid-column: 1; font-size: 54px; }
+    .tagline { position: static; grid-column: 1; width: auto; max-width: 360px; margin-top: 18px; }
+    .email { position: static; grid-column: 1; display: inline-block; margin-top: 18px; justify-self: start; }
+    .years { position: static; grid-column: 1; margin-top: 36px; align-self: end; padding-bottom: 40px; }
+    .figure {
+      position: relative; left: auto; bottom: auto; transform: none;
+      grid-column: 2; grid-row: 1 / 5; align-self: end; justify-self: stretch;
+      width: auto; height: 480px;
+    }
+    .person-photo { height: 460px; }
+    .badge { display: none; }
+
     .services-grid {
       grid-template-columns: minmax(300px, 380px) minmax(0, 520px);
       justify-content: center;
       gap: 48px;
     }
+
+    .quotes { flex-wrap: nowrap; }
+    .quote { width: auto; flex: 1 1 0; max-width: 340px; }
+
     .footer-grid { gap: 80px; }
   }
 
