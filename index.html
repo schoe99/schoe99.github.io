@@ -388,12 +388,11 @@
     .person-photo { height: 400px; }
     .badge { display: none; }
     .services-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 48px; }
-    .timeline::before { display: none; }
-    .entry { grid-template-columns: 1fr; text-align: center; }
-    .entry .node { grid-row: 1; justify-content: center; margin-bottom: 14px; }
-    .entry .when { grid-row: 2; text-align: center; padding: 0 0 6px; }
-    .entry .what { grid-row: 3; }
-    .entry .what p { margin-left: auto; margin-right: auto; }
+    .timeline::before { left: 9px; }
+    .entry { grid-template-columns: 20px 1fr; gap: 0 18px; }
+    .entry .when { grid-column: 2; text-align: left; padding: 0 0 6px; }
+    .entry .node { grid-column: 1; grid-row: 1 / span 2; justify-content: flex-start; }
+    .entry .what { grid-column: 2; }
     footer { text-align: center; }
     .footer-grid { display: flex; flex-direction: column; align-items: center; gap: 40px; }
     .footer-cols { flex-direction: column; gap: 40px; }
