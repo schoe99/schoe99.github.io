@@ -193,7 +193,7 @@
     grid-template-columns: 1fr 56px 1fr;
     margin-bottom: 56px;
   }
-  .entry .when { text-align: center; padding-right: 8px; }
+  .entry .when { text-align: right; padding-right: 8px; }
   .entry .when h3 { font-size: 20px; }
   .entry .when small { color: var(--muted); font-size: 13px; }
   .entry .node { display: flex; justify-content: center; }
@@ -203,9 +203,8 @@
     outline-offset: 5px;
     margin-top: 4px;
   }
-  .entry .what { text-align: center; }
   .entry .what h4 { font-size: 18px; }
-  .entry .what p { font-size: 14px; line-height: 1.8; color: var(--muted); margin: 8px auto 0; max-width: 380px; }
+  .entry .what p { font-size: 14px; line-height: 1.8; color: var(--muted); margin-top: 8px; max-width: 380px; }
 
   /* ============ works ============ */
   .works { background: #fff; }
@@ -391,8 +390,9 @@
     .services-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 48px; }
     .entry { grid-template-columns: 1fr; }
     .entry .node { grid-row: 1; justify-content: center; margin-bottom: 12px; }
-    .entry .when { grid-row: 2; padding: 0 0 6px; background: var(--cream); position: relative; }
-    .entry .what { grid-row: 3; background: var(--cream); position: relative; }
+    .entry .when { grid-row: 2; padding: 0 0 6px; background: var(--cream); position: relative; text-align: center; }
+    .entry .what { grid-row: 3; background: var(--cream); position: relative; text-align: center; }
+    .entry .what p { margin-left: auto; margin-right: auto; }
     footer { text-align: center; }
     .footer-grid { display: flex; flex-direction: column; align-items: center; gap: 40px; }
     .footer-cols { flex-direction: column; gap: 40px; }
