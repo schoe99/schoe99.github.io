@@ -151,12 +151,14 @@
 
   /* ============ services ============ */
   .services { background: #fff; }
+  .services h2 { text-align: center; }
   .services-grid {
     display: grid;
     grid-template-columns: 380px 520px;
     justify-content: center;
     gap: 96px;
     align-items: center;
+    margin-top: 64px;
   }
   .service-card {
     display: flex; align-items: center; gap: 18px;
@@ -205,7 +207,7 @@
 
   /* ============ works ============ */
   .works { background: #fff; }
-  .works-head { display: flex; align-items: flex-end; justify-content: space-between; }
+  .works-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
   .link-coral {
     color: var(--coral);
     font-size: 14px; font-weight: 600;
@@ -320,19 +322,19 @@
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
-      grid-template-rows: 1fr auto auto auto auto 1fr;
+      grid-template-rows: auto auto auto 1fr auto;
       align-items: start;
       column-gap: 32px;
       padding: 56px 40px 0;
       min-height: auto;
     }
-    h1 { grid-column: 1; grid-row: 2; font-size: 54px; }
-    .tagline { position: static; grid-column: 1; grid-row: 3; width: auto; max-width: 360px; margin-top: 18px; }
-    .email { position: static; grid-column: 1; grid-row: 4; display: inline-block; margin-top: 18px; justify-self: start; }
-    .years { position: static; grid-column: 1; grid-row: 5; margin-top: 32px; }
+    h1 { grid-column: 1; grid-row: 1; font-size: 54px; }
+    .tagline { position: static; grid-column: 1; grid-row: 2; width: auto; max-width: 360px; margin-top: 18px; }
+    .email { position: static; grid-column: 1; grid-row: 3; display: inline-block; margin-top: 18px; justify-self: start; }
+    .years { position: static; grid-column: 1; grid-row: 5; align-self: end; margin-top: 36px; padding-bottom: 40px; }
     .figure {
       position: relative; left: auto; bottom: auto; transform: none;
-      grid-column: 2; grid-row: 1 / 7; align-self: end; justify-self: stretch;
+      grid-column: 2; grid-row: 1 / 6; align-self: end; justify-self: stretch;
       width: auto; height: 480px;
     }
     .person-photo { height: 460px; }
@@ -362,21 +364,21 @@
       border-radius: 16px; box-shadow: var(--card-shadow);
       z-index: 10;
     }
-    h1 { font-size: 44px; }
-    .hero { min-height: auto; padding-bottom: 0; }
-    .tagline { position: static; width: auto; margin-top: 18px; max-width: 320px; white-space: normal; }
+    h1 { font-size: 44px; margin: 0 auto; }
+    .hero { min-height: auto; padding-bottom: 0; text-align: center; }
+    .tagline { position: static; width: auto; margin: 18px auto 0; max-width: 320px; white-space: normal; }
     .email { position: static; display: inline-block; margin-top: 18px; }
     .years { position: static; margin-top: 24px; justify-content: center; }
     .figure { position: relative; left: 0; transform: none; width: 100%; height: 420px; margin-top: 12px; }
     .person-photo { height: 400px; }
     .badge { display: none; }
-    .services-grid { grid-template-columns: 1fr; gap: 48px; }
+    .services-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 48px; }
+    .services-copy { text-align: center; }
     .timeline::before { left: 9px; }
     .entry { grid-template-columns: 20px 1fr; gap: 0 18px; }
     .entry .when { grid-column: 2; text-align: left; padding: 0 0 6px; }
     .entry .node { grid-column: 1; grid-row: 1 / span 2; justify-content: flex-start; }
     .entry .what { grid-column: 2; }
-    .works-head { flex-direction: column; align-items: center; text-align: center; gap: 14px; }
     footer { text-align: center; }
     .footer-grid { display: flex; flex-direction: column; align-items: center; gap: 40px; }
     .footer-cols { flex-direction: column; gap: 40px; }
@@ -433,6 +435,7 @@
   </section>
 
   <section class="services" id="services">
+    <h2>What do I do?</h2>
     <div class="services-grid">
       <div>
         <div class="service-card">
@@ -449,7 +452,6 @@
         </div>
       </div>
       <div class="services-copy">
-        <h2>What do I do?</h2>
         <p>I build software end to end. I scope the problem, ship a working version fast, and iterate until it&rsquo;s something that holds up. Most of my work sits at the intersection of web apps, data, and automation.</p>
         <p>Lately that&rsquo;s meant market data pipelines and dashboards, browser automation, scheduled bots that run themselves on a VPS, and the occasional interactive 3D experiment.</p>
       </div>
