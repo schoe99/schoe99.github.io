@@ -177,7 +177,7 @@
   .service-card h3 { font-size: 17px; }
   .service-card small { color: var(--muted); font-size: 13px; }
   .services-copy { text-align: center; }
-  .services-copy p { margin-top: 20px; line-height: 1.9; font-size: 15px; max-width: 520px; }
+  .services-copy p { margin: 20px auto 0; line-height: 1.9; font-size: 15px; max-width: 520px; }
 
   /* ============ experience ============ */
   .experience h2 { text-align: center; }
@@ -389,12 +389,10 @@
     .person-photo { height: 400px; }
     .badge { display: none; }
     .services-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 48px; }
-    .timeline::before { left: 9px; }
-    .entry { grid-template-columns: 20px 1fr; gap: 0 18px; }
-    .entry .when { grid-column: 2; text-align: center; padding: 0 0 6px; }
-    .entry .node { grid-column: 1; grid-row: 1 / span 2; justify-content: flex-start; }
-    .entry .what { grid-column: 2; text-align: center; }
-    .entry .what p { margin-left: auto; margin-right: auto; }
+    .entry { grid-template-columns: 1fr; }
+    .entry .node { grid-row: 1; justify-content: center; margin-bottom: 12px; }
+    .entry .when { grid-row: 2; padding: 0 0 6px; background: var(--cream); position: relative; }
+    .entry .what { grid-row: 3; background: var(--cream); position: relative; }
     footer { text-align: center; }
     .footer-grid { display: flex; flex-direction: column; align-items: center; gap: 40px; }
     .footer-cols { flex-direction: column; gap: 40px; }
