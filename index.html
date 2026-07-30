@@ -320,19 +320,19 @@
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
-      grid-template-rows: auto auto auto 1fr;
+      grid-template-rows: 1fr auto auto auto auto 1fr;
       align-items: start;
       column-gap: 32px;
       padding: 56px 40px 0;
       min-height: auto;
     }
-    h1 { grid-column: 1; font-size: 54px; }
-    .tagline { position: static; grid-column: 1; width: auto; max-width: 360px; margin-top: 18px; }
-    .email { position: static; grid-column: 1; display: inline-block; margin-top: 18px; justify-self: start; }
-    .years { position: static; grid-column: 1; margin-top: 36px; align-self: end; padding-bottom: 40px; }
+    h1 { grid-column: 1; grid-row: 2; font-size: 54px; }
+    .tagline { position: static; grid-column: 1; grid-row: 3; width: auto; max-width: 360px; margin-top: 18px; }
+    .email { position: static; grid-column: 1; grid-row: 4; display: inline-block; margin-top: 18px; justify-self: start; }
+    .years { position: static; grid-column: 1; grid-row: 5; margin-top: 32px; }
     .figure {
       position: relative; left: auto; bottom: auto; transform: none;
-      grid-column: 2; grid-row: 1 / 5; align-self: end; justify-self: stretch;
+      grid-column: 2; grid-row: 1 / 7; align-self: end; justify-self: stretch;
       width: auto; height: 480px;
     }
     .person-photo { height: 460px; }
